@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./Reset.css";
+import "./App.css";
+
+import Parent from "./components/Parent/Parent";
+
+import data from "./data.json";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Props and State</h1>
+      <ul>
+        <li>{data[0].name}</li>
+        <li>{data[1].name}</li>
+        <li>{data[2].name}</li>
+      </ul>
+      <Parent />
     </div>
   );
 }
